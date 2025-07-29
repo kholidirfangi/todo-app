@@ -9,7 +9,7 @@ const FilterTodos = ({ activeFilter, setActiveFilter }: FilterTodosProps) => {
   };
 
   return (
-    <div className="flex gap-3 bg-Very-Dark-Desaturated-Blue px-4 text-Dark-Grayish-Blue text-sm text-center justify-center py-3 rounded-md">
+    <div className="flex gap-3 bg-Very-Light-Gray dark:bg-Very-Dark-Desaturated-Blue px-4 text-Dark-Grayish-Blue text-sm text-center justify-center py-3 rounded-md">
       <p
         onClick={() => handleFilter("All")}
         className={`${

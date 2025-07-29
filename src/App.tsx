@@ -4,9 +4,17 @@ import type Todo from "./types/todo";
 import { useTodos } from "./hooks/useTodos";
 
 const App = () => {
-  const [activeFilter, setActiveFilter] = useState("Completed");
-  const { todos, addTodo, toggleTodoCompleted, deleteTodo, deleteCompleted } =
-    useTodos();
+  const [isDark, setIsDark] = useState(false);
+  const [activeFilter, setActiveFilter] = useState("All");
+  const {
+    todos,
+    addTodo,
+    toggleTodoCompleted,
+    editTodo,
+    deleteTodo,
+    deleteCompleted,
+    reorderTodos,
+  } = useTodos();
 
   const filteredtodos = useMemo(() => {
     return todos.filter((todo: Todo) => {
@@ -17,7 +25,7 @@ const App = () => {
   }, [todos, activeFilter]);
 
   return (
-    <main className="font-josefin-sans bg-slate-900 min-h-screen">
+    <main className="font-josefin-sans bg-Light-Grayish-Blue dark:bg-slate-900 min-h-screen">
       <picture>
         <source
           srcSet="./images/bg-desktop-dark.jpg"
@@ -32,13 +40,15 @@ const App = () => {
 
       <div className="w-full absolute top-14 px-5">
         <div className="max-w-lg mx-auto">
-          <Header />
+          <Header isDark={isDark} setIsDark={setIsDark} />
           <InputTodo onAddTodo={addTodo} />
           <ul className="mt-5 rounded-md overflow-hidden">
             {todos.length > 0 ? (
               <>
                 <TodoList
+                  onReorder={reorderTodos}
                   todos={filteredtodos}
+                  onEdit={editTodo}
                   onDelete={deleteTodo}
                   onToggle={toggleTodoCompleted}
                 />
