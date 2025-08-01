@@ -38,19 +38,19 @@ Users should be able to:
 ### Screenshot
 
 #### Desktop View
-![Desktop View](./ss/todo-app-desktop.png)
+![Desktop View](public/ss/todo-app-desktop.png)
 
 #### Mobile View
-![Mobile View](./ss/todo-app-mobile.png)
+![Mobile View](public/ss/todo-app-mobile.png)
 
 #### Theme Light
-![Desktop View](./ss/todo-light.png)
+![Desktop View](public/ss/todo-light.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/kholidirfangi/todo-app)
-- Live Site URL: [Add live site URL here](https://todo-app-one-theta-37.vercel.app/)
+- Solution URL: [solution here](https://github.com/kholidirfangi/todo-app)
+- Live Site URL: [live site URL here](https://todo-app-one-theta-37.vercel.app/)
 
 ## My process
 
